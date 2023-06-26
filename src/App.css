@@ -1,0 +1,121 @@
+.app-style {
+  max-width: 1200px;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+.title-style {
+  margin: 30px 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputBox-style {
+  background-color: rgb(200, 229, 238);
+  padding: 0px 30px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.inputBox-style > input {
+  margin: 0px 20px;
+  width: 250px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+}
+
+.inputBox-style > button {
+  background-color: royalblue;
+  width: 120px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  margin-left: auto;
+}
+
+.working-style {
+  width: 100%;
+  font-size: large;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.workingToggle {
+  align-self: flex-start;
+}
+
+.todoBox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.done-style {
+  font-size: large;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.todoBox-style {
+  width: 350px;
+  height: 200px;
+  border: 3px solid royalblue;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todoTitle {
+  width: 85%;
+  margin: 20px 0px 0px 0px;
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: left;
+}
+
+.todoBody {
+  width: 85%;
+  display: inline-block;
+  text-align: left;
+}
+
+.buttons {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteButton {
+  width: 130px;
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.doneButton {
+  width: 130px;
+  background-color: white;
+  border: 2px solid green;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+}
