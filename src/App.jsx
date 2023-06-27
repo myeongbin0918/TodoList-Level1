@@ -3,8 +3,8 @@ import './App.css';
 
 const App = () => {
   const [todos, setTodos] = useState([
-    { id: Date.now(), title: '리액트 공부하기', body: '리액트 기초를 공부해봅시다.', isDone: false },
-    { id: Date.now(), title: '리액트 절망하기', body: '리액트 기초를 놓아봅시다.', isDone: true },
+    { id: 1, title: '리액트 공부하기', body: '리액트 기초를 공부해봅시다.', isDone: false },
+    { id: 2, title: '리액트 절망하기', body: '리액트 기초를 놓아봅시다.', isDone: true },
   ]);
 
   const [title, setTitle] = useState('');
@@ -29,15 +29,8 @@ const App = () => {
       };
 
       setTodos([...todos, newTodo]);
-      setTodos(() => {
-        todos.forEach(todo => {
-          console.log('id:', todo.id);
-          console.log('title:', todo.title);
-          console.log('body:', todo.body);
-          console.log('isDone:', todo.isDone);
-        });
-      }, []);
-      console.log(setTodos([...todos, newTodo]));
+      // console.log('newTodo:', newTodo);
+      // console.log('Updated todo list:', [...todos, newTodo]);
     }
   };
 
