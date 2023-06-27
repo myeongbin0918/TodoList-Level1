@@ -107,6 +107,8 @@
   border-radius: 8px;
   margin: 10px;
   padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
   display: inline-block;
 }
 
@@ -117,5 +119,7 @@
   border-radius: 8px;
   margin: 10px;
   padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
   display: inline-block;
 }
