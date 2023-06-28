@@ -79,8 +79,6 @@ const App = () => {
             <TodoButton
               key={todo.id}
               todo={todo}
-              title={todo.title}
-              body={todo.body}
               RemoveTodoHandler={RemoveTodoHandler}
               toggleTodoStatus={toggleTodoStatus}
             />
@@ -94,8 +92,6 @@ const App = () => {
             <TodoButton
               key={todo.id}
               todo={todo}
-              title={todo.title}
-              body={todo.body}
               RemoveTodoHandler={RemoveTodoHandler}
               toggleTodoStatus={toggleTodoStatus}
             />
