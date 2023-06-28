@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import TodoButton from './TodoButton';
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -29,8 +30,8 @@ const App = () => {
       };
 
       setTodos([...todos, newTodo]);
-      // console.log('newTodo:', newTodo);
-      // console.log('Updated todo list:', [...todos, newTodo]);
+      setTitle('');
+      setBody('');
     }
   };
 
@@ -69,64 +70,36 @@ const App = () => {
         <input value={title} onChange={titleGhangeHandler}></input>
         내용
         <input value={body} onChange={bodyGhangeHandler}></input>
-        <button
-          onClick={() => {
-            AddTodoHandler(setTitle(''), setBody(''));
-          }}
-        >
-          추가하기
-        </button>
+        <button onClick={AddTodoHandler}>추가하기</button>
       </div>
       <div className='working-style'>
         <h2 className='workingToggle'>Working..🔥</h2>
         <div className='todoBox-group'>
-          {workingTodos.map(todo => {
-            return (
-              <div key={todo.id} className='todoBox-style'>
-                <span className='todoTitle'>{todo.title}</span> <br />
-                <span className='todoBody'>{todo.body}</span>
-                <div className='buttons'>
-                  <button
-                    className='deleteButton'
-                    onClick={() => {
-                      RemoveTodoHandler(todo.id);
-                    }}
-                  >
-                    삭제하기
-                  </button>
-                  <button className='doneButton' onClick={() => toggleTodoStatus(todo.id)}>
-                    {todo.isDone ? '취소' : '완료'}
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+          {workingTodos.map(todo => (
+            <TodoButton
+              key={todo.id}
+              todo={todo}
+              title={todo.title}
+              body={todo.body}
+              RemoveTodoHandler={RemoveTodoHandler}
+              toggleTodoStatus={toggleTodoStatus}
+            />
+          ))}
         </div>
       </div>
       <div className='done-style'>
         <h2>Done..!🎉</h2>
         <div className='todoBox-group'>
-          {doneTodos.map(function (todo) {
-            return (
-              <div key={todo.id} className='todoBox-style'>
-                <span className='todoTitle'>{todo.title}</span> <br />
-                <span className='todoBody'>{todo.body}</span>
-                <div className='buttons'>
-                  <button
-                    className='deleteButton'
-                    onClick={() => {
-                      RemoveTodoHandler(todo.id);
-                    }}
-                  >
-                    삭제하기
-                  </button>
-                  <button className='doneButton' onClick={() => toggleTodoStatus(todo.id)}>
-                    {todo.isDone ? '취소' : '완료'}
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+          {doneTodos.map(todo => (
+            <TodoButton
+              key={todo.id}
+              todo={todo}
+              title={todo.title}
+              body={todo.body}
+              RemoveTodoHandler={RemoveTodoHandler}
+              toggleTodoStatus={toggleTodoStatus}
+            />
+          ))}
         </div>
       </div>
     </div>
