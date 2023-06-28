@@ -19,7 +19,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: medium;
   font-weight: bold;
 }
 
@@ -41,28 +40,20 @@
   margin-left: auto;
 }
 
-.working-style {
-  width: 100%;
+.working-style,
+.done-style {
   font-size: large;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+  margin-top: 30px;
 }
 
-.workingToggle {
-  align-self: flex-start;
+.done-style {
+  margin-top: 50px;
 }
 
 .todoBox-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-}
-
-.done-style {
-  font-size: large;
-  margin-top: 20px;
-  overflow: auto;
+  gap: 25px;
 }
 
 .todoBox-style {
@@ -71,26 +62,16 @@
   border: 3px solid royalblue;
   border-radius: 10px;
   padding: 10px;
-  text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.todoTitle {
-  width: 85%;
-  margin: 20px 0px 0px 0px;
-  font-size: 25px;
-  font-weight: bold;
-  display: inline-block;
-  text-align: left;
-}
-
+.todoTitle,
 .todoBody {
   width: 85%;
-  display: inline-block;
-  text-align: left;
+  margin: 20px 0px 0px 0px;
 }
 
 .buttons {
@@ -100,7 +81,8 @@
   justify-content: space-between;
 }
 
-.deleteButton {
+.deleteButton,
+.doneButton {
   width: 130px;
   background-color: white;
   border: 2px solid red;
@@ -113,13 +95,5 @@
 }
 
 .doneButton {
-  width: 130px;
-  background-color: white;
   border: 2px solid green;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 15px;
-  font-weight: bold;
-  display: inline-block;
 }

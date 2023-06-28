@@ -73,7 +73,7 @@ const App = () => {
         <button onClick={AddTodoHandler}>추가하기</button>
       </div>
       <div className='working-style'>
-        <h2 className='workingToggle'>Working..🔥</h2>
+        <h2>Working..🔥</h2>
         <div className='todoBox-group'>
           {workingTodos.map(todo => (
             <TodoButton

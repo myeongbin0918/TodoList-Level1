@@ -1,7 +1,7 @@
 function TodoButton({ todo, RemoveTodoHandler, toggleTodoStatus }) {
   return (
     <div key={todo.id} className='todoBox-style'>
-      <p className='todoTitle'>{todo.title}</p>
+      <h2 className='todoTitle'>{todo.title}</h2>
       <p className='todoBody'>{todo.body}</p>
       <div className='buttons'>
         <button
